@@ -104,4 +104,10 @@ function countUniqueValues (arr) {
     }
     return i + 1
 }
-console.log(countUniqueValues([1, 1, 1, 2]))
+// console.log(countUniqueValues([1, 1, 1, 2]))
+
+// Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+// Your solution MUST have the following complexities:
+
+// Time: O(N)
