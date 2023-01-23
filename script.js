@@ -111,3 +111,42 @@ function countUniqueValues (arr) {
 // Your solution MUST have the following complexities:
 
 // Time: O(N)
+
+// use an object to compare values
+
+function sameFrequency(num1, num2) {
+    // can I compare length of numbers? Need to convert to string to
+    // compare length
+    // Need to first compare lengths - if not the same length, return false
+    let str1 = num1.toString()
+    let str2 = num2.toString()
+    if (str1.length !== str2.length) {
+        return false
+    }
+    // set up the object
+    const obj = {}
+    // loop over first string
+    for (let i=0; i<str1.length; i++) {
+        let number = str1[i]
+        // if the number is in the object, then add 1, if not assign the number to 1
+        obj[number] ? obj[number] += 1 : obj[number] = 1
+    }
+    // loop through second string
+    for (let i=0; i<str2.length; i++) {
+       let number = str2[i]
+    //    if obj doesnt have the number, return false
+       if (!obj[number]) {
+        return false
+       } else {
+        // if the obj does have the string, subject one, this helps because 
+        // if there is another value that doesn't match, but is already in 
+        // the number, 0 will return falsy
+        // Example: 1885, 1888 --> 5 will still have a 1 assigned to it, 
+        // but by the time we get to the third 8, the value is already 0
+        obj[number] -= 1
+       }
+       return true
+    }
+}
+console.log(sameFrequency(182,281))
+console.log(sameFrequency(34,14))
