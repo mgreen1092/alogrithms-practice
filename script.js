@@ -155,3 +155,28 @@ function sameFrequency(num1, num2) {
 // number of arguments, and checks whether there are any duplicates among 
 // the arguments passed in.  You can solve this using the frequency counter 
 // pattern OR the multiple pointers pattern.
+
+// Needs to have time and space O(N)
+
+// I'm not sure how to represent variable numbers in arguments --> don't need to put anything in argument
+function areThereDuplicates () {
+    console.log(arguments)
+    // always in an array
+    // we need to first value of the array
+    let left = 0
+    // we need the last value of the array
+    let right = arguments.length - 1
+    // while left < right, if the values aren't equal, add one to left and compare
+    while (left < right) {
+        if (arguments[left] !== arguments[right]) {
+            left ++
+            // if they are equal return true
+        } else {
+            return true
+        }
+    }
+    // outside of the while loop, return false
+    return false
+}
+console.log(areThereDuplicates(1, 2, 3))
+console.log(areThereDuplicates('a', 'b', 'c', 'a'))
