@@ -178,5 +178,9 @@ function areThereDuplicates () {
     // outside of the while loop, return false
     return false
 }
-console.log(areThereDuplicates(1, 2, 3))
-console.log(areThereDuplicates('a', 'b', 'c', 'a'))
+// console.log(areThereDuplicates(1, 2, 3))
+// console.log(areThereDuplicates('a', 'b', 'c', 'a'))
+
+// Write a function called averagePair. Given a sorted array of intergers and a target average,
+// getermine if there is a pair of values in the array where the average of the pair equals the 
+// target average. There may be more than one pair that matches the average
