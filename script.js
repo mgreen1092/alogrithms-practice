@@ -223,7 +223,7 @@ function averagePair(array, target) {
 // NOTE: a subarray must consisten of consecutive elements from 
 // the original array
 
-// Sliding Window
+// Sliding Window - want a subset of the data that is continuous
 // I will need a starting value at the first value of the array
 // I will need the value of the array with length of the passed
 // number
@@ -235,6 +235,10 @@ function maxSubarraySum (array, num) {
     let tempSum = 0
     if (array.length < num) return null
     for (let i=0; i<num; i++) {
+       maxSum += array[i]
+    }
+    tempSum = maxSum
+    for (let i=num; i<array.length; i++) {
         tempSum = tempSum - array[i-num] + array[i]
         maxSum = Math.max(maxSum, tempSum)
     }
