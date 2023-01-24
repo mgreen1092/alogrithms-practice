@@ -194,6 +194,7 @@ function areThereDuplicates () {
 // Need to end with return false 
 
 function averagePair(array, target) {
+    // edge case to say if nothing in an array
     let left = 0
     let right = array.length - 1
     while (left < right) {
@@ -212,6 +213,30 @@ function averagePair(array, target) {
     return false 
 }
 // console.log(averagePair([1,2,3],2.5))
-console.log(averagePair([1,3,3,5,6,7,10,12,19],8))
+// console.log(averagePair([1,3,3,5,6,7,10,12,19],8))
 // console.log(averagePair([-1,0,3,4,5,6], 4.1))
 // console.log(averagePair([-1,0,3,4,5,6], 4.1))
+
+// Given an array of integers and a number, write a function
+// called mzSubarraySum which finds the maximum sum of a subarray 
+// with the length of the number passed to the function
+// NOTE: a subarray must consisten of consecutive elements from 
+// the original array
+
+// Sliding Window
+// I will need a starting value at the first value of the array
+// I will need the value of the array with length of the passed
+// number
+// I will need a sum value that loops through all the values until
+// the length of the passed number
+
+function maxSubarraySum (array, num) {
+    let maxSum = 0
+    let tempSum = 0
+    if (array.length < num) return null
+    for (let i=0; i<num; i++) {
+        tempSum = tempSum - array[i-num] + array[i]
+        maxSum = Math.max(maxSum, tempSum)
+    }
+    return maxSum
+}
