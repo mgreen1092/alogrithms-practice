@@ -249,4 +249,10 @@ function maxSubarraySum (array, num) {
     }
     return maxSum
 }
-console.log(maxSubarraySum([100,200,300,400], 2))
+// console.log(maxSubarraySum([100,200,300,400], 2))
+
+// Write a function called minSubArrayLen which accepts two parameters - an arroy of positive
+// integers and a positive integer
+// This function should return the minimallenth of a contiguous subarray which the sume is 
+// greater than or equal too the integer passed to the function, if there isnt one, return 0 
+// instead
