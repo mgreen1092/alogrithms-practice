@@ -184,3 +184,34 @@ function areThereDuplicates () {
 // Write a function called averagePair. Given a sorted array of intergers and a target average,
 // getermine if there is a pair of values in the array where the average of the pair equals the 
 // target average. There may be more than one pair that matches the average
+
+// Multiple Pointer
+// takes the first value of the array and last value, add them together and divide by 2
+// to see if the avaerage is equal to the target average while the first index value is less 
+// than the second index value
+// If it isnt equal, add one to the right and do it again
+// If it is equal return true
+// Need to end with return false 
+
+function averagePair(array, target) {
+    let left = 0
+    let right = array.length - 1
+    while (left < right) {
+        let average = (array[left] + array[right])/2
+        console.log(average)
+        if (average > target) {
+            console.log(array[right], 'RIGHT')
+            right --
+        } else if (average !== target) {
+            console.log(array[left], 'ARRAY LEFT')
+            left ++
+        } else {
+            return true
+        }
+    }
+    return false 
+}
+// console.log(averagePair([1,2,3],2.5))
+console.log(averagePair([1,3,3,5,6,7,10,12,19],8))
+// console.log(averagePair([-1,0,3,4,5,6], 4.1))
+// console.log(averagePair([-1,0,3,4,5,6], 4.1))
