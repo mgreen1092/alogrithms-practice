@@ -235,12 +235,18 @@ function maxSubarraySum (array, num) {
     let tempSum = 0
     if (array.length < num) return null
     for (let i=0; i<num; i++) {
+         // sum the first two values
        maxSum += array[i]
     }
     tempSum = maxSum
     for (let i=num; i<array.length; i++) {
+        // subtract the first number of the sequence and add one 
+        // to the end
         tempSum = tempSum - array[i-num] + array[i]
+        // if tempSum is larger than maxSum, it is now assgined 
+        // to maxSum so we can return maxSum
         maxSum = Math.max(maxSum, tempSum)
     }
     return maxSum
 }
+console.log(maxSubarraySum([100,200,300,400], 2))
