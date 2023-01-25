@@ -279,7 +279,7 @@ function isPalindrome(str) {
         return true
     }
     let newStr=str.toLowerCase();
-    let newStr2 = newStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,"")
+    let newStr2 = newStr.replace(/[\[\].'",\/#!$%\^&\*;:{}=\-_`~()@?\s]/g,"")
     console.log(newStr2)
     let left = 0
     let right = newStr2.length - 1
@@ -296,4 +296,4 @@ function isPalindrome(str) {
     return true
 }
 // console.log(isPalindrome("A man, a plan, a canal: Panam"))
-console.log(isPalindrome("ab@a"))
+console.log(isPalindrome("Live on evasions? No, I save no evil."))
