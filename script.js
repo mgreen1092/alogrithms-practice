@@ -303,3 +303,64 @@ function isPalindrome(str) {
 // return -1 when version1 is < version2
 // return 0 when versions are equal
 // return 1 when version1 > version2
+
+function VersionCompare (version1, version2) {
+    // how to compare 2 to 2.0.0 etc
+    // remove the period to be able to compare numbers
+   let version1Split = version1.replace(/[.]/g,"")
+   let version2Split = version2.replace(/[.]/g,"")
+   console.log(version1Split, version2Split, 'SPLIT')
+//    Make the strings the same length to be able to compare
+   if (version1Split.length < version2Split.length) {
+    // insert 0's to however long version2Split is
+        let x = version2Split.length
+        let version1Split2 = version1Split.padEnd(x, '0')
+        console.log(version1Split2, version2Split)
+        // complete the return if statements
+        if (version1Split2 < version2Split) {
+            return -1
+        }
+        if (version1Split2 > version2Split) {
+            return 1
+        }
+        if (version1Split2 === version2Split) {
+            return 0
+        }
+   }
+//    if version2 length is greater than version1
+   if (version2Split.length < version1Split.length) {
+    // insert 0's to however long version2Split is
+        let x = version1Split.length
+        let version2Split2 = version2Split.padEnd(x, '0')
+        // console.log(version2Split2, version1Split)
+        // complete the return if statements
+        if (version1Split < version2Split2) {
+            return -1
+        }
+        if (version1Split > version2Split2) {
+            return 1
+        }
+        if (version1Split === version2Split2) {
+            return 0
+        }
+   }
+//    if the lengths are equal
+   if (version1Split.length === version1Split.length) {
+    // need to account for when the last two digits are higher meaning a higher version
+        if (version2Split[version2Split.length-2] > version1Split[version1Split.length-2]) {
+            return 1
+        }
+        if (version1Split < version2Split) {
+            return -1
+        }
+        if (version1Split > version2Split) {
+            return 1
+        }
+        if (version1Split === version2Split) {
+            return 0
+        }
+       
+    }
+}
+
+console.log(VersionCompare('2.10.0.1', '2.1.0.10'))
