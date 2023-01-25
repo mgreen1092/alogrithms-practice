@@ -256,3 +256,14 @@ function maxSubarraySum (array, num) {
 // This function should return the minimallenth of a contiguous subarray which the sume is 
 // greater than or equal too the integer passed to the function, if there isnt one, return 0 
 // instead
+
+function maxSubArrayLen () {
+    // know this is a sliding window challenge because I am taking a subset of an array
+    // I will need to loop throu
+}
+
+// Valid Palindrome
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all 
+// non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+// Given a string s, return true if it is a palindrome, or false otherwise.
