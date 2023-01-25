@@ -296,4 +296,10 @@ function isPalindrome(str) {
     return true
 }
 // console.log(isPalindrome("A man, a plan, a canal: Panam"))
-console.log(isPalindrome("Live on evasions? No, I save no evil."))
+// console.log(isPalindrome("Live on evasions? No, I save no evil."))
+
+// Assessment
+// input is a string as version1, version2
+// return -1 when version1 is < version2
+// return 0 when versions are equal
+// return 1 when version1 > version2
