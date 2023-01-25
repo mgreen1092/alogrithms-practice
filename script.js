@@ -267,3 +267,33 @@ function maxSubArrayLen () {
 // non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
 // Given a string s, return true if it is a palindrome, or false otherwise.
+
+// covert all letters to lowercase
+// remove all spaces and punctuation
+// multiple pointers - compares the first item and last item to see if it is the same, if not false, if it is the same, move each
+// point inward one space
+
+function isPalindrome(str) {
+    // if there is one letter return true
+    if (str.length === 0) {
+        return true
+    }
+    let newStr=str.toLowerCase();
+    let newStr2 = newStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()\s]/g,"")
+    console.log(newStr2)
+    let left = 0
+    let right = newStr2.length - 1
+    console.log(newStr2[left])
+    while (left < right) {
+        // if the first and last letter are equal, then move each point inward and compare
+        if (newStr2[left] === newStr2[right]) {
+            right --
+            left ++
+        } else {
+            return false
+        }
+    }
+    return true
+}
+// console.log(isPalindrome("A man, a plan, a canal: Panam"))
+console.log(isPalindrome("ab@a"))
