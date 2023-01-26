@@ -384,3 +384,8 @@ function factorial (num) {
 // the power of the base to the exponent. This function should mimic the functionality of 
 // Math.pow()  - do not worry about negative bases and exponents.
 
+function power (base, exp) {
+    if (exp <= 0) return 1
+    return base ** exp
+}
+console.log(power(2, 4))
