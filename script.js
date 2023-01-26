@@ -394,5 +394,7 @@ function power (base, exp) {
 
 function productOfArray (arr) {
     if (arr.length === 0) return 1
-    return product
+    // need to take the first value of the array and then slice it out and repeat the process
+    return product = arr[0] * productOfArray(arr.slice(1))
 }
+console.log(productOfArray([1, 2, 3]))
