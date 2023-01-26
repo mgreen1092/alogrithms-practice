@@ -388,4 +388,11 @@ function power (base, exp) {
     if (exp <= 0) return 1
     return base ** exp
 }
-console.log(power(2, 4))
+// console.log(power(2, 4))
+// Recurion - Product of Array
+// write a function called productOfArray which takes in an array of numbers and returns the product of them all
+
+function productOfArray (arr) {
+    if (arr.length === 0) return 1
+    return product
+}
