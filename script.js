@@ -386,7 +386,7 @@ function factorial (num) {
 
 function power (base, exp) {
     if (exp <= 0) return 1
-    return base ** exp
+    return base ** power(base,exponent - 1)
 }
 // console.log(power(2, 4))
 // Recurion - Product of Array
