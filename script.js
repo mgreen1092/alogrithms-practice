@@ -373,3 +373,8 @@ function VersionCompare (version1, version2) {
 // console.log(VersionCompare('2.10.0.1.5', '2.1.0.50'))
 
 // Recrusive Factorial Problem
+function factorial (num) {
+    if (num === 1) return 1
+    return num * factorial(num - 1)
+}
+console.log(factorial(4))
