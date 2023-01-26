@@ -397,4 +397,4 @@ function productOfArray (arr) {
     // need to take the first value of the array and then slice it out and repeat the process
     return product = arr[0] * productOfArray(arr.slice(1))
 }
-console.log(productOfArray([1, 2, 3]))
+// console.log(productOfArray([1, 2, 3]))
