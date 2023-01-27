@@ -398,3 +398,23 @@ function productOfArray (arr) {
     return product = arr[0] * productOfArray(arr.slice(1))
 }
 // console.log(productOfArray([1, 2, 3]))
+
+const formatDate = (dateInput) => {
+    // write your code here
+    // use the Date method to get year, month, day
+    let date = new Date(dateInput);
+    // separate year month day to be able to conjoin later
+    let year = date.getFullYear()
+    let month = '' + (date.getMonth() + 1);
+    let day = '' + date.getDate();
+    
+    if (month.length < 2) {
+      month = '0'+ month
+    }
+    if (day.length < 2) {
+      day = '0' + day
+    }
+    // conjoin year month day to correct format, need to include -
+    return [year, month, day].join('-')
+  }
+console.log(formatDate("3/17/1888"))  
