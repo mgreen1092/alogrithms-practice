@@ -1,5 +1,6 @@
 // BIG O NOTATION
 
+
 // Timing our code
 //Leetcode longest common prefix
 var longestCommonPrefix = function(strs) {
@@ -433,4 +434,48 @@ function linearSearch(arr, num) {
         return -1
     }
 }
-console.log(linearSearch([1, 2, 3, 55], 55))
+// console.log(linearSearch([1, 2, 3, 55], 55))
+
+// Binary Search
+// accepts a sorted array and a value youre looking for
+// create two variables, left and right for beginning and end of array
+// while the left pointer is less than the right:
+    // make a pointer in the middle
+    // if you find the value you want, return the index
+    // if the value is too small, move the left pointer up
+    // if the value is too large, move the right pointer down
+// if the value isnt there, return -1
+function binarySearch (arr, val) {
+    let start = 0
+    let end = arr.length - 1
+    let middle = Math.floor((start + end)/2)
+    while (arr[middle] !== val && start <= end) {
+        if (val < arr[middle]) {
+            end = middle + 1
+        } else {
+            start = middle + 1
+        }
+        middle = Math.floor((start+end)/2)
+    }
+    // console.log(start, middle, end)
+    if (arr[middle] === val){
+        return middle
+    } else {
+        return -1 
+    }
+    // let left = 0
+    // let right = arr.length - 1
+    // let mid = Math.floor((left + right) / 2)
+    // while (arr[mid] !== val) {
+    //     console.log(left, mid, right)
+    //     if (val < arr[mid]) {
+    //         right = mid - 1
+    //     } else {
+    //         start = mid + 1
+    //     }
+    //     mid = Math.floor((left + right) / 2)
+    // } 
+    // console.log(left, mid, right)
+    // return mid
+}
+console.log(binarySearch([1, 2, 3, 4, 5], 2))
