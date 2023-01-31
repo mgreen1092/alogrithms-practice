@@ -486,6 +486,7 @@ function stringSearch (string, val) {
             console.log(string[i], val[i])
             // first letter of string is the same for the length of val
             if (string[i+j] !== val[j]) {
+                // need to add i and j because of nested loops, this allows string to go to the next index to compare
                 break
             }
             if(j===val.length - 1) {
