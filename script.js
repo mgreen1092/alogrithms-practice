@@ -478,3 +478,21 @@ function binarySearch (arr, val) {
 // if the characters dont match, break out of the inner loop
 // if the characters do match, keep going
 // if you complete the inner loop and find a match, incrememnt the count of the matches
+
+function stringSearch (string, val) {
+    let count = 0
+    for (let i=0; i<string.length; i++) {
+        for (let j=0; j<val.length; i++) {
+            console.log(string[i], val[i])
+            // first letter of string is the same for the length of val
+            if (string[i+j] !== val[j]) {
+                break
+            }
+            if(j===val.length - 1) {
+                count ++
+            }
+        }
+    }
+    return count 
+}
+console.log(stringSearch('lorie loled', 'lol'))
