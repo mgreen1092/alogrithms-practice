@@ -470,5 +470,11 @@ function binarySearch (arr, val) {
     // } 
     // console.log(left, mid, right)
     // return mid
-}
-console.log(binarySearch([1, 2, 3, 4, 5], 2))
+// console.log(binarySearch([1, 2, 3, 4, 5], 2))
+
+// Naive string search
+// Loop over the longer string
+// Loop over the shorter string
+// if the characters dont match, break out of the inner loop
+// if the characters do match, keep going
+// if you complete the inner loop and find a match, incrememnt the count of the matches
