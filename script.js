@@ -506,12 +506,14 @@ function stringSearch (string, val) {
 // return sorted array
 
 function bubbleSort (arr) {
-    for (let i=arr.length - 1; i>=0; i--) {
-        for (let j=0; j<i-1; j++) {
+    for (let i=0; i<arr.length; i++) {
+        for (let j=0; j<arr.length; j++) {
             if (arr[j] > arr[j+1]) {
+                console.log(arr[j], arr[i])
+                // Swap
                 let temp = arr[j]
                 arr[j] = arr[j+1]
-                temp = arr[j+1]
+                arr[j+1] = temp
             }
         }
     }
