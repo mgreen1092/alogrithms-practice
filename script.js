@@ -490,10 +490,17 @@ function stringSearch (string, val) {
                 break
             }
             if(j===val.length - 1) {
+                // when we get to the end of the value, we know we have a match
                 count ++
             }
         }
     }
     return count 
 }
-console.log(stringSearch('lorie loled', 'lol'))
+// console.log(stringSearch('lorie loled', 'lol'))
+
+// Bubble sort
+// Start looping with a variable called i in the end of the array towards the beginning
+// start an inner loop with a variable called j from the beginning until i-1
+// if arr[j] is greater than arr[j+1], swap those two values 
+// return sorted array
