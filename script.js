@@ -520,7 +520,10 @@ function stringSearch (string, val) {
 //     return arr
 // }
 function bubbleSort (arr) {
+    let noSwaps
     for (let i=arr.length; i>0; i--) {
+        // noSwaps starts at true
+        noSwaps=true
         for (let j=0; j<i-1; j++) {
             // this allows the loop to run fewer times
             if (arr[j] > arr[j+1]) {
@@ -529,8 +532,11 @@ function bubbleSort (arr) {
                 let temp = arr[j]
                 arr[j] = arr[j+1]
                 arr[j+1] = temp
+                // if the steps above were completed, a swap was done
+                noSwaps=false
             }
         }
+        if (noSwaps) break
     }
     return arr
 }
