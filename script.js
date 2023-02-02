@@ -541,4 +541,11 @@ function bubbleSort (arr) {
     return arr
 }
 
-console.log(bubbleSort([5, 4, 3, 2, 1]))
+// console.log(bubbleSort([5, 4, 3, 2, 1]))
+
+// Selection Sort
+// store the first element as the smallest value you've seen so far
+// compare this item ot the next item in the array until you find a smaller number
+// if a smaller number is found, designate that smaller number to be the new min and continue until the end of the array
+// if the minimum is not the value (index) you initially begain with, swap the two values
+// repeat this with the next element until the array is sorted
