@@ -568,3 +568,27 @@ function selectionSort (arr) {
     return arr
 }
 // console.log(selectionSort([3, 5, 1, 8]))
+
+// Insertion Sort 
+// Start by picking the second element in the array
+// Compare it to the one before and swap if necessary
+// Continue to the next element and if it is in the incorrect order, iterate through the sorted portion (left side) to place the element in the correct order
+
+function insertionSort(arr) {
+    for (let i=1; i<arr.length; i++) {
+        let currentVal = arr[i]
+        for (let j=i-1; j>=0 && arr[j] > currentVal; i--) {
+            arr[j+1] = arr[j]
+            console.log(arr)
+        }
+        arr[j+1] = currentValn
+    }
+    return arr
+}
+// console.log(insertionSort([3, 5, 2, 1]))
+
+// Sliding window example
+
+function maxProfit (prices) {
+    
+}
