@@ -606,4 +606,32 @@ function maxProfit (prices) {
     return max_profit;
   };
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4]))
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]))
+
+// Merge function
+// Create an empty array, take a look at the smallest values in each input array
+// While there are still values we haven't looked at:
+//   If the value in the first array is smaller than the value in the second array, push the value in the first array into our
+//   results and move on to the next value
+//   If the value in the first array is larger than the value in the second array, push the value in the second array into our 
+//   results and move on tot he next value in the second array
+//   Once we exhaust one array, push in all remaining values from the other array
+
+function mergeSort (arr1, arr2) {
+    let i = 0
+    let j = 0
+    let results = []
+    while (i < arr1.length) {
+        console.log(arr1[i])
+        if (arr1[i] < arr2[j]) {
+            results.push(arr1[i])
+            i++
+        } else if (arr1[i] > arr2[j]) {
+            results.push(arr2[j])
+            j++
+        }
+    }
+    results.push(arr2[arr2.length-1])
+    return results
+}
+console.log(mergeSort([1, 5, 8], [2, 4, 10]))
