@@ -621,7 +621,7 @@ function mergeSort (arr1, arr2) {
     let i = 0
     let j = 0
     let results = []
-    while (i < arr1.length) {
+    while (i < arr1.length && j<arr2.length) {
         console.log(arr1[i])
         if (arr1[i] < arr2[j]) {
             results.push(arr1[i])
@@ -631,7 +631,14 @@ function mergeSort (arr1, arr2) {
             j++
         }
     }
-    results.push(arr2[arr2.length-1])
+    while (i< arr1.length) {
+        results.push(arr1[i])
+        i++
+    }
+    while (j<arr2.length) {
+        results.push(arr2[j])
+        j++
+    }
     return results
 }
 console.log(mergeSort([1, 5, 8], [2, 4, 10]))
