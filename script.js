@@ -704,3 +704,25 @@ function mergeSort (arr) {
     // and then swap the current element with the element at the pivot index
 // Swap the starting element (pivot) with the pivot index
 // Return the pivot index
+
+function quickSort (arr, start=0, end=arr.legnth+1) {
+    // bring in swap function
+    function swap (arr, i, j) {
+        let temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+    }
+    let pivot = arr[start]
+    // swapIndex will keep track of swap whe comparing
+    let swapIndex = start
+    for (let i=start+1; i<arr.length; i++) {
+        if (pivot > arr[i]) {
+            swapIndex += 1
+            swap(arr, swapIndex, i)
+        } 
+    }
+    swap(arr, start, swapIndex)
+    return swapIndex
+
+}
+console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
