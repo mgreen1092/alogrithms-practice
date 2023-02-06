@@ -664,3 +664,9 @@ function twoSum (numbers, target) {
     }
 }
 // console.log(twoSum([2, 7, 11, 15], 9))
+
+// Merge Sort
+// Break up the array into halves until you have arays that are empty or have one element (slice)
+// once you have smaller sorted arraysm merge those arrays with other sorted arrays until you
+// are back at the full lenght of the array
+
