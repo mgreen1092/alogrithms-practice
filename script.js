@@ -641,4 +641,26 @@ function mergeSort (arr1, arr2) {
     }
     return results
 }
-console.log(mergeSort([1, 5, 8], [2, 4, 10]))
+// console.log(mergeSort([1, 5, 8], [2, 4, 10]))
+
+// Two Sum II - Input Array Is Sorted
+function twoSum (numbers, target) {
+    let i = 0
+    let j = numbers.length - 1
+    let results = []
+    console.log(i, j)
+    while (i < j) {
+        console.log(i, j)
+        if (numbers[i] + numbers[j] === target) {
+            results.push([i+1, j+1])
+            return results
+        }
+        if (numbers[i] + numbers[j] > target) {
+            j--
+        } 
+        if (numbers[i] + numbers[j] < target) {
+            i++
+        } 
+    }
+}
+// console.log(twoSum([2, 7, 11, 15], 9))
