@@ -679,4 +679,28 @@ function mergeSort (arr) {
     return merge(left, right)
     
 }
-console.log(mergeSort([10, 24, 76, 73, 72, 1, 9]))
+// console.log(mergeSort([10, 24, 76, 73, 72, 1, 9]))
+
+// Pivot Helper
+// In order ti implement merge sort, it is useful to first implement a function responsible
+// for arranging elements in an array on either side of a pivot
+// Given an arry, this helper function should designate an element as the pivot
+// It should then rearrange elements in the array so that all values less than the pivot are 
+// moved to the left of the pivot, and all values greater than the pivot are moved to the right 
+// of the pivot
+// The order of the elements on either side of the pivot doesn't matter
+// The helped should di this in place and don't make a new array
+// When complete it should return the index
+// picking the pivot is important, the runtime depends in part on how one selects the pivot
+// Ideally the pivot should be chosen so that it isi roughly the median value in the data set 
+// you're sorting
+// For simplicity, we will always choose the pivot to be the first element 
+// Function will accept three arguments: an array, a start index, and an end index
+// Grab the pivot from the start of the array
+// store the current pivot index in a variable (this will keep track of where the pivot should
+// end up)
+// Loop through the array from the start until the end
+    // if the pivot is greater than the current element, incremement the pivot index variable
+    // and then swap the current element with the element at the pivot index
+// Swap the starting element (pivot) with the pivot index
+// Return the pivot index
