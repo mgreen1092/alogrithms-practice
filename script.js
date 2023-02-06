@@ -617,7 +617,7 @@ function maxProfit (prices) {
 //   results and move on tot he next value in the second array
 //   Once we exhaust one array, push in all remaining values from the other array
 
-function mergeSort (arr1, arr2) {
+function merge (arr1, arr2) {
     let i = 0
     let j = 0
     let results = []
@@ -669,4 +669,14 @@ function twoSum (numbers, target) {
 // Break up the array into halves until you have arays that are empty or have one element (slice)
 // once you have smaller sorted arraysm merge those arrays with other sorted arrays until you
 // are back at the full lenght of the array
+// Once the array has been merged back together, return the merged (and sorted!) array
 
+function mergeSort (arr) {
+    if (arr.length <= 1) return arr
+    let middle = Math.floor(arr.length/2)
+    let left = mergeSort(arr.slice(0, middle))
+    let right = mergeSort(arr.slice(middle))
+    return merge(left, right)
+    
+}
+console.log(mergeSort([10, 24, 76, 73, 72, 1, 9]))
