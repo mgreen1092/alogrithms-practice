@@ -705,7 +705,7 @@ function mergeSort (arr) {
 // Swap the starting element (pivot) with the pivot index
 // Return the pivot index
 
-function quickSort (arr, start=0, end=arr.legnth+1) {
+function pivot (arr, start=0, end=arr.legnth+1) {
     // bring in swap function
     function swap (arr, i, j) {
         let temp = arr[i]
@@ -725,4 +725,10 @@ function quickSort (arr, start=0, end=arr.legnth+1) {
     return swapIndex
 
 }
-console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
+// console.log(pivot([4, 8, 2, 1, 5, 7, 6, 3]))
+
+// Quick Sort Pseudocode
+// Call the pivot helper on the array
+// When the helper returns to you the updated pivot index, recursively call the pivot helper on
+// the subarray to the left of that index, and the subarray to the right of that index
+
