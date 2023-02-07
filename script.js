@@ -753,3 +753,8 @@ function getDigit (num, place) {
     return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
 }
 console.log(getDigit(12345, 0))
+// Digit Count Helper Function - returns the number of digits in num
+function digitCount (num) {
+    if (num === 0) return 1
+    return Math.floor(Math.log10(Math.abs(num))) + 1
+}
