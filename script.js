@@ -745,14 +745,14 @@ function quickSort(arr, left=0, right=arr.length-1) {
 // console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
 
 // Radix Sort Helpers
-function getDigit (num, place) {
+function getDigit (num, i) {
     // console.log(num)
     // let numString = num.toString().split("").reverse().join("")
     // console.log(numString)
     // return numString[place]
     return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
 }
-console.log(getDigit(12345, 0))
+// console.log(getDigit(12345, 0))
 // Digit Count Helper Function - returns the number of digits in num
 function digitCount (num) {
     if (num === 0) return 1
@@ -773,3 +773,18 @@ function mostDigits (arr) {
     // place each number in the corresponding bucket
 // Replace our existing array with values in our buckets, starting with 0 and going up to 9
 // return list at the end
+
+function radixSort(nums) {
+    let maxDigitCount = mostDigits(nums)
+    console.log(maxDigitCount)
+    for (let k=0; k<maxDigitCount; k++) {
+        let digitBuckets = Array.from({length: 10}, () => [])
+        for (let i=0; i<nums.length; i++) {
+            let digit = getDigit(nums[i], k)
+            digitBuckets[digit].push(nums[i])
+        }
+        nums = [].concat(...digitBuckets)
+    }
+    return nums
+}
+console.log(radixSort([23, 345, 5467, 12, 2345, 9852]))
