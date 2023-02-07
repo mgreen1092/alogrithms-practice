@@ -763,4 +763,13 @@ function mostDigits (arr) {
     for (let i=0; i<arr.length; i++) {
         maxDigits = Math.max(maxDigits, digitCount(arr[i]))
     }
+    return maxDigits
 }
+// Define a function that accepts a list of numbers
+// Figure out the largest number of digits
+// Loop from k = 0 up to the largest number of digits
+// for each iteractio of the loops;
+    // create buckets fro each digit (0 to 9)
+    // place each number in the corresponding bucket
+// Replace our existing array with values in our buckets, starting with 0 and going up to 9
+// return list at the end
