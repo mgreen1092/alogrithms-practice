@@ -746,9 +746,10 @@ function quickSort(arr, left=0, right=arr.length-1) {
 
 // Radix Sort Helpers
 function getDigit (num, place) {
-    console.log(num)
-    let numString = num.toString().split("").reverse().join("")
-    console.log(numString)
-    return numString[place]
+    // console.log(num)
+    // let numString = num.toString().split("").reverse().join("")
+    // console.log(numString)
+    // return numString[place]
+    return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10
 }
 console.log(getDigit(12345, 0))
