@@ -745,3 +745,10 @@ function quickSort(arr, left=0, right=arr.length-1) {
 // console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]))
 
 // Radix Sort Helpers
+function getDigit (num, place) {
+    console.log(num)
+    let numString = num.toString().split("").reverse().join("")
+    console.log(numString)
+    return numString[place]
+}
+console.log(getDigit(12345, 0))
