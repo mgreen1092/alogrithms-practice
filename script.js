@@ -1,6 +1,7 @@
 // BIG O NOTATION
 
 
+
 // Timing our code
 //Leetcode longest common prefix
 var longestCommonPrefix = function(strs) {
@@ -832,3 +833,43 @@ function threeSum (nums) {
 // Contains Duplicate
 // Given an integer array nums, return true if any value appears at least twice in an array
 // and return false if every element in distinct
+
+function containsDuplicates(nums) {
+    console.log(nums);
+    // let obj = {}
+    // for (let val of nums) {
+    //     obj[val] = (obj[val] || 0) + 1
+    //     console.log(obj[val])
+    //     if (obj[val] !== 2) {
+    //         return false
+    //     }
+    //     return true
+    // } 
+    // console.log(obj, 'OBJ')
+    // for (let key in obj) {
+    //     if (key !== 2) return false 
+    //     else return true
+    // } return true 
+    // let i = 0
+    // console.log(nums[i])
+    // for (let j=1; j<nums.length; j++) {
+    //     console.log(nums[j])
+    //     console.log(nums[i], nums[j], 'COMPARE')
+    //     if (nums[i] !== nums[j]) {
+    //         j++
+    //     } else {
+    //         return true
+    //     }
+    // }
+    // return false
+    // let i = 0
+    // let j = nums.length - 1
+    // while (i<j) {
+    //     if (nums[i] === nums[j]) return true
+    //     else if (nums[i] < nums[j]) j--
+    //     else i++
+    // }
+    // return false
+    return new Set(nums).size !== nums.length
+}
+containsDuplicates([ 1, 2, 3, 4 ])
