@@ -827,4 +827,8 @@ function threeSum (nums) {
    
 }
 
-console.log(threeSum([-1,0,1,2,-1,-4]))
+// console.log(threeSum([-1,0,1,2,-1,-4]))
+
+// Contains Duplicate
+// Given an integer array nums, return true if any value appears at least twice in an array
+// and return false if every element in distinct
