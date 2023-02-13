@@ -878,6 +878,8 @@ function containsDuplicates(nums) {
 class Student {
     constructor(firstName, lastName, year) {
         this.firstName = firstName
+        // this refers to the individual instance of the class, so the 
+        // individual student
         this.lastName = lastName
         this.grade = year
     }
