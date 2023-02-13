@@ -908,12 +908,18 @@ class Student {
         // Reduce: a is the accumulator and b is the current value
         return sum / this.scores.length
     }
+    static enrollStudents() {
+        return "ENROLLING STUDENTS"
+    }
 }
 // defined the Student class patterns, the parameters in the contructor
 // include all the properties we want to include
 
-let firstStudnet = new Student("Colt", "Steele", 15)
+let firstStudent = new Student("Colt", "Steele", 15)
 let secondStudent = new Student("Blue", "Steele", 12)
 firstStudent.fullName()
 // defining a class doesn't do much, we need to instantiate instances with 
 // the new keyword
+Student.enrollStudents()
+// static method is not relevant to an individual instance but still want it as part of the 
+// student class
