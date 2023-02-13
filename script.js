@@ -872,4 +872,20 @@ function containsDuplicates(nums) {
     // return false
     return new Set(nums).size !== nums.length
 }
-containsDuplicates([ 1, 2, 3, 4 ])
+// containsDuplicates([ 1, 2, 3, 4 ])
+
+// JavaScript classes example
+class Student {
+    constructor(firstName, lastName, year) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.grade = year
+    }
+}
+// defined the Student class patterns, the parameters in the contructor
+// include all the properties we want to include
+
+let firstStudnet = new Student("Colt", "Steele", 15)
+let secondStudent = new Student("Blue", "Steele", 12)
+// defining a class doesn't do much, we need to instantiate instances with 
+// the new keyword
