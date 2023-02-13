@@ -878,7 +878,7 @@ function containsDuplicates(nums) {
 class Student {
     constructor(firstName, lastName, year) {
         this.firstName = firstName
-        // this refers to the individual instance of the class, so the 
+        // this refers to the individual instance or object of the class, so the 
         // individual student
         this.lastName = lastName
         this.grade = year
@@ -923,3 +923,23 @@ firstStudent.fullName()
 Student.enrollStudents()
 // static method is not relevant to an individual instance but still want it as part of the 
 // student class
+
+// Leetcode - Sliding Window
+// one variable at index 0
+// for loop going through the string
+// compare index 0 to index 1 in for loop
+// if different put them in an array and count aray
+// if not different, index variable increases
+function lenghtOfLongestSubstring (s) {
+    // console.log(s[0])
+    let firstVal = 0
+    let results = []
+    for (i=0; i<s.length; i++) {
+        if (s[i] !== s[i + 1]) {
+            console.log(s[i], s[i+1])
+        } else {
+            firstVal ++
+        }
+    }
+}
+lenghtOfLongestSubstring("abcabcbb")
