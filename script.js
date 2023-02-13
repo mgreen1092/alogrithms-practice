@@ -882,6 +882,31 @@ class Student {
         // individual student
         this.lastName = lastName
         this.grade = year
+        this.tardies = 0
+        // whenever we make a new student, tardies is automatically set to 0
+        this.scores=[]
+    }
+    fullName () {
+        return `Your full name is ${this.firstName} ${this.lastName} has been late 
+        ${this.tardies} time(s)`
+    }
+    markLate() {
+        this.tardies += 1
+        // refernecing the individual student 
+        if (this.tardies >= 3) {
+            return "You are explelled!!"
+        }
+        return `${this.firstName} ${this.lastName}`
+    }
+    addScore(score) {
+        this.scores.push(score)
+        // adds whatever is passed through as score to the end of the array
+        return this.scores
+    }
+    calculateAverage() {
+        let sum = this.scores.reduce(function(a, b){return a + b})
+        // Reduce: a is the accumulator and b is the current value
+        return sum / this.scores.length
     }
 }
 // defined the Student class patterns, the parameters in the contructor
@@ -889,5 +914,6 @@ class Student {
 
 let firstStudnet = new Student("Colt", "Steele", 15)
 let secondStudent = new Student("Blue", "Steele", 12)
+firstStudent.fullName()
 // defining a class doesn't do much, we need to instantiate instances with 
 // the new keyword
