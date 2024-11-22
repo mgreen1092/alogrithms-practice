@@ -954,8 +954,45 @@ function lenghtOfLongestSubstring (s) {
 
 
 // Add Two Numbers
-// You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+// You are given two non-empty linked lists representing two non-negative integers. 
+// The digits are stored in reverse order, and each of their nodes contains a single digit. 
+// Add the two numbers and return the sum as a linked list.
 
-// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+// You may assume the two numbers do not contain any leading zero, except the number 0 
+// itself.
+// Definition for singly-linked list.
+// Definition for singly-linked list.
+function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val);
+    this.next = (next === undefined ? null : next);
+}
+
+var addTwoNumbers = function(l1, l2) {
+    let dummy = new ListNode(0); // Dummy node to simplify result list construction
+    let current = dummy;        // Pointer to the current node in the result list
+    let carry = 0;              // Initialize carry to 0
+
+    // Iterate while there are nodes in l1, l2, or there's a carry
+    while (l1 || l2 || carry) {
+        // Get values from current nodes (default to 0 if node is null)
+        let val1 = l1 ? l1.val : 0;
+        let val2 = l2 ? l2.val : 0;
+
+        // Compute the sum and carry
+        let total = val1 + val2 + carry;
+        carry = Math.floor(total / 10);  // Update carry
+        let currentDigit = total % 10;  // Get the current digit
+
+        // Add the current digit as a new node
+        current.next = new ListNode(currentDigit);
+        current = current.next;
+
+        // Move to the next nodes in l1 and l2, if available
+        if (l1) l1 = l1.next;
+        if (l2) l2 = l2.next;
+    }
+
+    return dummy.next; // Return the result list, skipping the dummy node
+};
 
 
