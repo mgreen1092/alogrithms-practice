@@ -931,15 +931,31 @@ Student.enrollStudents()
 // if different put them in an array and count aray
 // if not different, index variable increases
 function lenghtOfLongestSubstring (s) {
-    // console.log(s[0])
-    let firstVal = 0
-    let results = []
-    for (i=0; i<s.length; i++) {
-        if (s[i] !== s[i + 1]) {
-            console.log(s[i], s[i+1])
-        } else {
-            firstVal ++
+    let longest = 0
+    let seen = {}
+    let start = 0
+    for (let i=0; i<s.length; i++) {
+        let char = s[i]
+        console.log(char)
+        if (seen[char]) {
+            console.log(seen[char])
+            start = Math.max(start, seen[char])
         }
+        // index-beginning of subtring + 1(to include current in count)
+        longest = Math.max(longest, i-start+1)
+        // store the index of the next char so you don't double the count
+        seen[char] = i+ 1
     }
+    return longest
 }
-lenghtOfLongestSubstring("abcabcbb")
+// lenghtOfLongestSubstring("abcabcbb")
+
+// Singly Linked List
+
+
+// Add Two Numbers
+// You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+
+// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+
