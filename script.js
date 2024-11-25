@@ -995,4 +995,26 @@ var addTwoNumbers = function(l1, l2) {
     return dummy.next; // Return the result list, skipping the dummy node
 };
 
+// Longest Palindrome
+// Given a string s, return the longest 
+// palindromic
+ 
+// substring
+//  in s.
+
+ 
+
+// Example 1:
+
+// Input: s = "babad"
+// Output: "bab"
+// Explanation: "aba" is also a valid answer.
+// Example 2:
+
+// Input: s = "cbbd"
+// Output: "bb"
+
+var longestPalindrome = function(s) {
+    
+};
 
