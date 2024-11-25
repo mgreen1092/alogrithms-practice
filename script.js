@@ -1026,7 +1026,7 @@ function longestPalindrome (string) {
     let longest = ''
     for (let i=0; i<string.length; i++ ) {
         for (let j=i; j< string.length; j++) {
-            let substring = substring.slice(i, j+1)
+            let substring = string.slice(i, j+1)
             if (isPalindrome(substring) && substring.length > longest.length) {
                 longest = substring
             }
