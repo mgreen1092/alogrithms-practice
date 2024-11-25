@@ -1014,7 +1014,30 @@ var addTwoNumbers = function(l1, l2) {
 // Input: s = "cbbd"
 // Output: "bb"
 
-var longestPalindrome = function(s) {
-    
+function longestPalindrome (string) {
+    // loop through the string
+   
+    // for (let i=0; i<string.length; i<=0) {
+    //     print(string.length)
+    // }
+    // check if reverse is the same
+    // if not go one more
+    // if it is a match, check one more then if not return the result
+    let longest = ''
+    for (let i=0; i<string.length; i++ ) {
+        for (let j=i; j< string.length; j++) {
+            let substring = substring.slice(i, j+1)
+            if (isPalindrome(substring) && substring.length > longest.length) {
+                longest = substring
+            }
+        }
+    }
+    return longest
 };
+
+function isPalindrome(str) {
+    return str === str.split("").reverse().join("")
+}
+
+console.log(longestPalindrome("babad"))
 
